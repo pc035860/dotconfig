@@ -6,7 +6,11 @@ done
 unset file
 
 # init z   https://github.com/rupa/z
-. ~/code/z/z.sh
+if [ -r ~/code/z/z.sh ]; then
+    . ~/code/z/z.sh
+elif [ -r ~/git/z/z.sh ]; then
+    . ~/git/z/z.sh
+fi
 
 # init git-completion
 source ~/git-completion.bash
@@ -30,7 +34,7 @@ complete -W "NSGlobalDomain" defaults
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
-    test r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
 
     alias grep='grep --color=auto'
