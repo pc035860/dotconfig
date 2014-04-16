@@ -1,4 +1,3 @@
-dotconfig
-=========
+# dotconfig
 
-Me me me.
+Configuration files on my mac.
