@@ -1,0 +1,24 @@
+[user]
+	name = pc035860
+	email = pc035860@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
+	ui = true
+[http]
+	sslVerify = false
+[alias]
+	lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = !"git lg1"
+#	co = checkout
+#	ci = commit 
+#	st = status
+#	br = branch
+#	de = describe
+[core]
+	editor = vim
+[credential]
+	helper = osxkeychain
